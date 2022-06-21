@@ -856,7 +856,8 @@ img {
 
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: 1px solid var(--accent-color);
+  border: none;
+  cursor: pointer;
 
   font-family: 'Roboto';
   font-style: normal;
@@ -867,6 +868,11 @@ img {
   color: var(--primary-white-color);
 
   background: var(--accent-color);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background: var(--secondary-accent-color);
 }
 
 .subscribe-icon {
@@ -936,12 +942,11 @@ img {
 /* -----------------------------------------------MODAL-FORM------------------------------------------------- */
 
 .modal-form {
-  padding: 0 40px;
+  padding: 40px 40px;
 }
 
 .modal-title {
   width: 448px;
-  margin-top: 40px;
   margin-bottom: 12px;
 
   font-family: 'Roboto';
@@ -972,8 +977,8 @@ img {
 
 .modal-icon {
   position: absolute;
-  bottom: 50%;
-  left: 11px;
+  bottom: 20px;
+  left: 12px;
 }
 
 .modal-data-label {
@@ -981,17 +986,6 @@ img {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-
-  color: var(--secondary-text-color);
-}
-
-.modal-agree {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
 
   color: var(--secondary-text-color);
 }
@@ -1007,6 +1001,18 @@ img {
   border-radius: 4px;
 }
 
+.modal-checkbox {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-text-color);
+}
+
+.modal-agree {
+  display: flex;
+  justify-content: center;
+}
 .modal-btn {
   width: 200px;
   height: 50px;
@@ -1018,8 +1024,6 @@ img {
   align-items: center;
   text-align: center;
 
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
