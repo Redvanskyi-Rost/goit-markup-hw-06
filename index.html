@@ -430,24 +430,38 @@
         </button>
 
         <form class="modal-form">
-          <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+          <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
           <div class="modal-data">
             <label class="modal-data-label" for="user-name">Имя</label>
-            <input class="modal-data-input" type="text" name="name" id="user-name" />
+            <input
+              class="modal-data-input"
+              type="text"
+              name="name"
+              id="user-name"
+              minlength="2"
+              required
+            />
             <svg class="modal-icon" width="18" height="18">
               <use href="./images/icons.svg#user-icon"></use>
             </svg>
           </div>
           <div class="modal-data">
             <label class="modal-data-label" for="user-tel">Телефон</label>
-            <input class="modal-data-input" type="tel" name="tel" id="user-tel" />
+            <input
+              class="modal-data-input"
+              type="tel"
+              name="tel"
+              id="user-tel"
+              minlength="8"
+              required
+            />
             <svg class="modal-icon" width="18" height="18">
               <use href="./images/icons.svg#phone-icon"></use>
             </svg>
           </div>
           <div class="modal-data">
             <label class="modal-data-label" for="user-email">Почта</label>
-            <input class="modal-data-input" type="email" name="e-mail" id="user-email" />
+            <input class="modal-data-input" type="email" name="e-mail" id="user-email" required />
             <svg class="modal-icon" width="18" height="18">
               <use href="./images/icons.svg#mail-icon"></use>
             </svg>
@@ -458,7 +472,6 @@
               class="modal-textarea"
               name="coment"
               id="coment"
-              rows="10"
               placeholder="Введите текст"
             ></textarea>
           </div>
