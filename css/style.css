@@ -939,6 +939,11 @@ img {
   cursor: pointer;
 }
 
+.modal-close-icon:hover,
+.modal-close-icon:focus {
+  fill: #2196f3;
+}
+
 /* -----------------------------------------------MODAL-FORM------------------------------------------------- */
 
 .modal-form {
