@@ -933,15 +933,19 @@ img {
   justify-content: center;
   align-items: center;
 
-  background: var(--primary-white-color);
+  background: transparent;
   border-radius: 50%;
   border: 1px solid var(--modal-bg);
   cursor: pointer;
 }
 
-.modal-close-icon:hover,
-.modal-close-icon:focus {
-  fill: #2196f3;
+.modal-close-icon {
+  transition: fill 250ms var(--animation-timing);
+}
+
+.close-icon:hover .modal-close-icon,
+.close-icon:focus .modal-close-icon {
+  fill: var(--accent-color);
 }
 
 /* -----------------------------------------------MODAL-FORM------------------------------------------------- */
@@ -979,6 +983,8 @@ img {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border 250ms var(--animation-timing);
 }
 
 .modal-icon {
@@ -986,6 +992,8 @@ img {
   bottom: 20px;
   left: 12px;
   border: none;
+
+  transition: fill 250ms var(--animation-timing);
 }
 
 .modal-data-input:focus,
@@ -1023,6 +1031,8 @@ img {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border 250ms var(--animation-timing);
 }
 
 .modal-textarea::placeholder {
@@ -1042,22 +1052,9 @@ img {
   color: var(--secondary-text-color);
 }
 
-.checkbox-input {
-  margin-right: 8px;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
-
 .checkbox-label {
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 .checkbox-icon {
@@ -1067,6 +1064,13 @@ img {
   margin-right: 8px;
   border: 1px solid var(--secondary-text-color);
   border-radius: 2px;
+
+  transition: border 250ms var(--animation-timing), background-color 250ms var(--animation-timing);
+}
+
+.checkbox-input:hover + .checkbox-icon,
+.checkbox-input:focus + .checkbox-icon {
+  border: 1px solid var(--accent-color);
 }
 
 .checkbox-text-agree {
@@ -1099,13 +1103,17 @@ img {
   cursor: pointer;
 
   color: var(--primary-white-color);
-  background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--accent-color);
+
   border: none;
   border-radius: 4px;
+
+  transition: background-color 250ms var(--animation-timing),
+    box-shadow 250ms var(--animation-timing);
 }
 
 .modal-btn:hover,
 .modal-btn:focus {
   background: var(--secondary-accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
