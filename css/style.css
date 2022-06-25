@@ -807,6 +807,7 @@ img {
   width: 358px;
   height: 50px;
   margin-top: 0;
+  padding: 15px 15px 15px 15px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -832,7 +833,6 @@ img {
 
 .subscribe-form input::placeholder {
   width: 47px;
-  padding: 15px 15px 15px 15px;
 
   font-family: 'Roboto';
   font-style: normal;
@@ -972,13 +972,12 @@ img {
 .modal-data {
   display: flex;
   flex-direction: column;
-  position: relative;
+  margin-bottom: 10px;
 }
 
 .modal-data-input {
   width: 100%;
   height: 40px;
-  margin-bottom: 10px;
   padding-left: 42px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -988,11 +987,15 @@ img {
 }
 
 .modal-icon {
-  position: absolute;
-  bottom: 20px;
-  left: 12px;
-  border: none;
+  position: relative;
+}
 
+.modal-logo-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  border: none;
   transition: fill 250ms var(--animation-timing);
 }
 
@@ -1002,8 +1005,8 @@ img {
   outline: none;
 }
 
-.modal-data-input:focus + .modal-icon,
-.modal-data-input:hover + .modal-icon {
+.modal-data-input:focus + .modal-logo-icon,
+.modal-data-input:hover + .modal-logo-icon {
   fill: var(--accent-color);
 }
 
